@@ -1,0 +1,25 @@
+<!-- detail -->
+@let etu = etudiant();
+<div class="detail">
+
+  <div class="detail-row">
+    <div class= "label">Nom :</div>
+    <div class= "value",(click)="onNameClick()">{{etu.nom}}</div>
+  </div>
+
+   <div class="detail-row">
+    <div class= "label">Prenom :</div>
+    <div class= "value">{{etu.prenom}}</div>
+  </div>
+
+   <div class="detail-row">
+    <div class= "label"> Age : </div>
+    <div class= "value">{{etu.age}}</div>
+  </div>
+
+   <div class="detail-row">
+    <div class= "label"> Classe : </div>
+    <div class= "value">{{etu.classe|classe}}</div>
+  </div>
+
+</div>

@@ -1,0 +1,40 @@
+
+ <table class="table">
+<!-- Entête du tableau -->
+  <thead>
+    <tr>
+      <th>Nom</th>
+
+      <th>Prenom</th>
+
+      <th></th>
+    </tr>
+  </thead>
+     <tbody>
+      @for (etudiant of etudiants();track etudiant.id) {
+     <tr>
+        <td> {{etudiant.nom}} </td>
+
+        <td> {{etudiant.prenom}} </td>
+        <td >
+
+          <button (click)="onEdit(etudiant.id)" class="btn-edit">Edit</button>
+          <button (click)="onDelete(etudiant.id)" class="btn-del">Delete</button>
+          <button (click)="onDetail(etudiant.id)" class="btn-view">Detail</button>
+        </td>
+
+      </tr>
+    }
+</tbody>
+ </table>
+
+
+
+
+
+
+
+
+
+
+
