@@ -1,9 +1,9 @@
 
 
 
-import { Etudiant } from '../model/etudiant.model';
+import { Etudiant } from '../../../model/etudiant.model';
 import { Component, input, output } from '@angular/core';
-import { ClassePipe } from '../classe-pipe';
+import { ClassePipe } from '../../../classe-pipe';
 
 
 @Component({
@@ -14,9 +14,5 @@ import { ClassePipe } from '../classe-pipe';
 })
 export class etudiant {
 etudiant= input.required<Etudiant>()
-// nameClick = output<string>();
 
-// onNameClick(){
-//   this.nameClick.emit(this.etudiant().id);
-// }
 }

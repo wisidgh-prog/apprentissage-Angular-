@@ -1,7 +1,7 @@
 import { etudiant } from './../etudiant/etudiant';
 import { Component, input, output } from '@angular/core';
-import { Etudiant } from '../model/etudiant.model';
-import { App } from '../app';
+import { Etudiant } from '../../../model/etudiant.model';
+import { App } from '../../../app';
 @Component({
   selector: 'app-etudiant-list',
   imports: [],

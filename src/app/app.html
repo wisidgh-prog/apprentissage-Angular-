@@ -1,12 +1,14 @@
-<app-etudiant-list [etudiants]="etudiants"
- (detail)="showDetail($event)"
-  (delete)="onDelete($event)"
-  (edit)="onEdit($event)"
- />
-@if (currentEtudiant) {
-<app-etudiant [etudiant]="currentEtudiant"
 
- />
-}
+<!-- <router-outlet/> -->
+<input [formControl]="usernameCtrl" type="text" placeholder="username"  />
+{{usernameCtrl.hasError('required') ? 'Username is required' : ''}}
+{{usernameCtrl.hasError('minlength') ? 'Username must be at least 3 characters long' : ''}}
+<div>
+  <label > <input type="radio" name="major" [value]="true" /> >=18 y </label>
+  <label > <input type="radio" name="major" [value]="false" /> < 18 y </label>
 
+</div>
+value: {{usernameCtrl.value}}
+<br>
+valid: {{usernameCtrl.valid}}
 

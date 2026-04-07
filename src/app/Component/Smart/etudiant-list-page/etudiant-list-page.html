@@ -1,0 +1,10 @@
+<app-etudiant-list [etudiants]="etudiants"
+ (detail)="showDetail($event)"
+  (delete)="onDelete($event)"
+  (edit)="onEdit($event)"
+ />
+@if (currentEtudiant) {
+<app-etudiant [etudiant]="currentEtudiant"
+
+ />
+}

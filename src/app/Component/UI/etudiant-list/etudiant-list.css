@@ -1,5 +1,5 @@
 .table {
-  width:50%;
+  width:auto;
   border-collapse:collapse;
   font-size:0.85rem;
   letter-spacing:1.5px;
@@ -15,15 +15,27 @@
    color:#e0e0ec; font-size:0.72rem;
    text-transform:uppercase;
     letter-spacing:1.5px;
-     
+
      }
 .table td{
   padding:11px 14px;
  }
 .table tbody
  { background:#1a1a2e;
-   color:#e8e8f0;
+   color:  #e8e8f0;
    }
+
+/* { background:#e8e8f0;
+   color: #1a1a2e;
+   } */
+
+
+
+
+
+
+
+
 /* .btn {
   display: inline-flex;
   align-items: center;
