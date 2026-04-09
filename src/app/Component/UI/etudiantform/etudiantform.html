@@ -1,1 +1,84 @@
-<p>etudiantform works!</p>
+<form [formGroup]="form" autocomplete="off" novalidate class="form">
+  @let nomCtrl = form.get('nom');
+
+
+
+  <!-- Champs Nom -->
+
+<div class="red">
+@if (nomCtrl?.hasError('required') && nomCtrl?.touched) {
+  <p>Le nom est requis</p>
+}
+@if (nomCtrl?.hasError('minlength')) {
+  <p>Le nom doit contenir au moins 3 caractères</p>
+}
+@if (nomCtrl?.hasError('maxlength')) {
+  <p>Le nom doit contenir au maximum 20 caractères</p>
+}
+
+</div>
+
+  <div class="form-row">
+    <label for="nom">Nom</label>
+    <input formControlName="nom" form id="nom" type="text" />
+
+  </div>
+  <!-- Champs Prénom -->
+@let prenomCtrl = form.get('prenom');
+<div class="red">
+ @if (prenomCtrl?.hasError('required') && prenomCtrl?.touched) {
+  <p>Le prenom est requis</p>
+}
+@if (prenomCtrl?.hasError('minlength')) {
+  <p>Le prenom doit contenir au moins 3 caractères</p>
+}
+</div>
+
+  <div class="form-row">
+    <label for="prenom">Prénom</label>
+    <input formControlName="prenom" form id="prenom" type="text" />
+  </div>
+  <!-- Champs Âge -->
+ @let ageCtrl = form.get('age');
+<div class="red">
+  @if (ageCtrl?.hasError('required') && ageCtrl?.touched) {
+  <p>L'âge est requis</p>
+}
+@if (ageCtrl?.hasError('min')) {
+  <p>L'âge doit être supérieur à 18</p>
+}
+@if (ageCtrl?.hasError('max')) {
+  <p>L'âge doit être inférieur à 50</p>
+}
+</div>
+
+  <div class="form-row">
+  <label>Âge</label>
+  <input formControlName="age" form id="age" type="text">
+</div>
+  <!-- Champs Classe -->
+   @let classeCtrl = form.get('classe');
+   <div class="red">
+      @if (classeCtrl?.hasError('required') && classeCtrl?.touched) {
+     <p>La classe est requise</p>
+         }
+   </div>
+
+  <div class="form-row">
+    <label for="classe">Classe</label>
+    <select formControlName="classe" id="classe">
+      <option value="L1">Licence1</option>
+      <option value="L2">Licence2</option>
+      <option value="L3">Licence3</option>
+      <option value="M1">Master1</option>
+      <option value="M2">Master2</option>
+
+    </select>
+  </div>
+<!-- boutons -->
+  <div class="form-buttons">
+    <button disabled type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+</form>
+
